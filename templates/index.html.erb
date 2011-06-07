@@ -18,6 +18,7 @@
       </thead>
       <tbody>
         <%%unless @searches.blank? %>
+          <div><h2>Found <%%= @searches.length %></h2></div>
           <%% @searches.each do |isearch| %>
             <tr class="<%%= cycle("even", "odd") -%>">
               <%%@selected_columns.each do |column|%>
@@ -30,6 +31,8 @@
               <%%end%>
             </tr>
           <%% end %>
+        <%% else %>
+          <div><h2 style="color:red">No Results Found</h2></div>
         <%% end %>
       </tbody>
     </table>
