@@ -57,7 +57,7 @@ Scaffoldhub::Specification.new do
 
   # Copy any file without running an ERB transformation
   file 'search_styles.css', :dest => 'public/stylesheets/'
-  file 'search.html.erb', :dest => 'app/helpers/layouts/'
+  file 'search.html.erb', :dest => 'app/views/layouts/'
   file 'dynamic_search_query.rb', :dest => 'app/models/'
 
   # Add a gem to the Gemfile
