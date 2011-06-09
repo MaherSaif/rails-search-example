@@ -64,14 +64,15 @@ Scaffoldhub::Specification.new do
   file 'search_styles.css', :dest => 'public/stylesheets/'
   file 'search.html.erb', :dest => 'app/views/layouts/'
   file 'dynamic_search_query.rb', :dest => 'app/models/'
+  file 'search_field_exception.rb', :dest => 'app/models/'
 
   post_install_message <<MESSAGE
 
-**********************************************************************************************
-Run "rake db:migrate" to create your new database table.\n
-Then run your Rails server and open http://localhost:3000/PLURAL_NAME to see the index page.\n
-- Add some data in generated model using http://localhost:3000/PLURAL_NAME/new \n
-Then Enter the text to search and experience the FUN.\n
-**********************************************************************************************
-MESSAGE
+	**********************************************************************************************
+	Run "rake db:migrate" to create your new database table.\n
+	Then run your Rails server and open http://localhost:3000/PLURAL_NAME to see the index page.\n
+	- Add some data in generated model using http://localhost:3000/PLURAL_NAME/new \n
+	Then Enter the text to search and experience the FUN.\n
+	**********************************************************************************************
+	MESSAGE
 end
