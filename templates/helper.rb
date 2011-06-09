@@ -1,4 +1,4 @@
-module <%= controller_class_name %>Helper
+module <%= class_name %>Helper
 
   def key_columns
     user_def_cols = default_columns
@@ -24,7 +24,7 @@ module <%= controller_class_name %>Helper
 
   ## Duplicated in Model
   def default_columns
-    all_cols = <%=  class_name %>.column_names.dup
+    all_cols = <%= class_name.singularize.camelize %>.column_names.dup
     user_def_cols = all_cols.reject{|c|['created_at','updated_at','id'].include?(c)}
     user_def_cols
   end

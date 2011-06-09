@@ -54,7 +54,7 @@ class <%= class_name %> < <%= parent_class_name.classify %>
 
   ## Duplicated in Helper
   def self.default_columns
-    all_cols = <%= class_name %>.column_names.dup
+    all_cols = <%= class_name.singularize.camelize %>.column_names.dup
     user_def_cols = all_cols.reject{|c|['created_at','updated_at','id'].include?(c)}
     user_def_cols
   end
